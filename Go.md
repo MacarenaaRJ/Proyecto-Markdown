@@ -1,4 +1,4 @@
-# Markdown enseñando paso a paso Go
+# Manual Go
 
 Escrito por **Macarena Ramos Jiménez**
 
