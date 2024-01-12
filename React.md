@@ -1,4 +1,4 @@
-# Markdown enseñando paso a paso React
+# Manual React
 
 Escrito por **Macarena Ramos Jiménez**
 
