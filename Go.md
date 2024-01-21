@@ -184,8 +184,7 @@ func main() {
 }
 ```
 
-**Nota para aquellos que se estén abrumando por la cantidad de tipos de números enteros en Go**
-¡No te preocupes por la variedad de tipos de números enteros en Go! Al principio, puede parecer un poco abrumador, pero en realidad, es bastante simple.
+**Nota de tipos de números enteros en Go**
 
 Los diferentes tipos de enteros están ahí para darte flexibilidad en cuanto al rango de valores que puedes representar. En situaciones cotidianas, generalmente usarás simplemente `int` para números enteros regulares. Solo si necesitas un control más preciso sobre el tamaño o la eficiencia de almacenamiento, podrías explorar otros tipos de enteros.
 
