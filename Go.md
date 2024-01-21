@@ -4,7 +4,7 @@ Escrito por **Macarena Ramos Jiménez**
 
 - email: macarenarj96@gmail.com
 - Linkedin: www.linkedin.com/in/macarenarj
-
+  
 # Tabla de contenidos
 
 ## Go
@@ -20,7 +20,6 @@ Escrito por **Macarena Ramos Jiménez**
 - [[#CRUD con MYSQL|CRUD con MYSQL]]
 - [[#Pruebas|Pruebas]]
 - [[#Buenas prácticas|Buenas prácticas]]
-- [[#Conclusión|Conclusión]]
 - [[#Recursos|Recursos]]
 
 # Go
@@ -1346,6 +1345,224 @@ go test -cover
 
 Esto es una breve introducción sobre tests en Go que te servirá como conceptos básicos para escribir tests efectivos en Go. Estos tests no solo garantizarán el correcto funcionamiento de tu código, sino que también facilitarán futuras modificaciones y colaboración con otros desarrolladores.
 
+
+## Caso práctico
+Para comenzar, asegúrate de tener Go instalado en tu sistema.
+
+Ahora, crearemos un programa simple en Go que imprime "¡Hola, mundo!".
+
+Abre en un editor de código un fichero nuevo que se llame `hola_mundo.go` y añade el siguiente código:
+```go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("¡Hola, mundo!")
+}
+```
+
+A continuación abre una terminal y ejecuta el siguiente comando:
+```sh
+go run hola_mundo.go
+```
+
+El programa imprimirá "¡Hola, mundo!".
+
+### Estructuras de Control
+Ahora, ampliaremos el programa para incluir estructuras de control:
+```go
+package main
+
+import "fmt"
+
+func main() {
+    var edad int
+    fmt.Print("Ingresa tu edad: ")
+    fmt.Scan(&edad)
+
+    if edad >= 18 {
+        fmt.Println("Eres mayor de edad.")
+    } else {
+        fmt.Println("Eres menor de edad.")
+    }
+}
+```
+
+Este programa introduce el paquete fmt. La función fmt.Scan() en lenguaje Go escanea los textos de entrada. Es decir, este programa te pedirá ingresar tu edad. Según seas mayor o menor de edad te imprimirá el texto correspondiente.
+
+### Bucles
+En este apartado, añadiremos un bucle para imprimir los números del 1 al 5:
+```go
+for i := 1; i <= 5; i++ { 
+	fmt.Println(i) 
+}
+```
+Este programa utiliza un bucle `for` para imprimir los números del 1 al 5.
+
+El código final quedará así:
+```go
+package main
+
+import "fmt"
+
+func main() {
+    var edad int
+    fmt.Print("Ingresa tu edad: ")
+    fmt.Scan(&edad)
+
+    if edad >= 18 {
+        fmt.Println("Eres mayor de edad.")
+    } else {
+        fmt.Println("Eres menor de edad.")
+    }
+    
+	for i := 1; i <= 5; i++ { 
+		fmt.Println(i) 
+	}
+}
+```
+
+El programa primero pedirá al usuario ingresar la edad. Después según la edad imprimirá si es o no mayor de edad para terminar imprimiendo los números del 1 al 5.
+
+### Array (Estructuras de Datos)
+```go
+package main
+
+import "fmt"
+
+func main() {
+	// Resto del código
+    nombres := [3]string{"Alicia", "Alberto", "Marcos"}
+
+    for _, nombre := range nombres {
+        fmt.Println(nombre)
+    }
+}
+```
+
+Este código que hemos añadido, imprimirá los nombres en el array o arreglo. Como ya hemos aprendido, el arreglo es de longitud definida. En este caso de tres nombres. 
+
+### Funciones (Modularidad)
+Vamos a modularizar nuestro código creando una función para saludar:
+```go
+package main
+
+import "fmt"
+
+func saludar(nombre string) {
+    fmt.Println("¡Hola,", nombre, "!")
+}
+
+func main() {
+	// Resto del código
+    saludar("Alicia")
+    saludar("Carlos")
+}
+```
+
+Esta vez, utilizamos una función `saludar` para imprimir saludos personalizados.
+Según el nombre que incluyamos en la llamada a la función se imprimirá un nombre u otro. En el primer caso se saludará a Alicia y en el segundo a Carlos. Primero, `"¡Hola,Alicia!"` y después `"¡Hola,Carlos!"`.
+
+### POO (Programación Orientada a Objetos)
+Ahora usaremos los structs de go.
+```go
+package main
+
+import "fmt"
+
+type Libro struct {
+    Titulo  string
+    Autor   string
+    Paginas int
+}
+
+func main() {
+	// Resto del código
+    libro := Libro{
+        Titulo:  "Aprendiendo Go",
+        Autor:   "Gopher",
+        Paginas: 150,
+    }
+
+    fmt.Println("Título:", libro.Titulo)
+    fmt.Println("Autor:", libro.Autor)
+    fmt.Println("Páginas:", libro.Paginas)
+}
+```
+Aquí definimos una estructura `Libro` y creamos una instancia para imprimir información sobre un libro.
+
+Cuando nos referimos a una instancia es simplemente que estamos iniciando una variable de tipo libro. El tipo libro que hemos definido tiene título, autor y páginas. Al imprimir esos valores, el programa mostrará el valor correspondiente de nuestra variable libro.
+
+### Código completo
+Después de este caso práctico, nuestra función main quedará así:
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+// Estructura para representar un libro
+type Libro struct {
+	Titulo  string
+	Autor   string
+	Paginas int
+}
+
+// Función para saludar
+func saludar(nombre string) {
+	fmt.Println("¡Hola,", nombre, "!")
+}
+
+func main() {
+	// Sintaxis básica
+	fmt.Println("¡Hola, mundo!")
+
+	// Estructuras de control
+	var edad int
+	fmt.Print("Ingresa tu edad: ")
+	fmt.Scan(&edad)
+
+	if edad >= 18 {
+		fmt.Println("Eres mayor de edad.")
+	} else {
+		fmt.Println("Eres menor de edad.")
+	}
+
+	// Bucles
+	for i := 1; i <= 5; i++ {
+		fmt.Println(i)
+	}
+
+	// Array (Estructuras de Datos)
+	nombres := [3]string{"Alice", "Bob", "Charlie"}
+	for _, nombre := range nombres {
+		fmt.Println(nombre)
+	}
+
+	// Funciones (Modularidad)
+	saludar("Alice")
+	saludar("Bob")
+
+	// POO (Programación Orientada a Objetos)
+	libro := Libro{
+		Titulo:  "Aprendiendo Go",
+		Autor:   "Gopher",
+		Paginas: 150,
+	}
+
+	fmt.Println("Título:", libro.Titulo)
+	fmt.Println("Autor:", libro.Autor)
+	fmt.Println("Páginas:", libro.Paginas)
+}
+
+```
+
+Cuando el código de go se va haciendo más grande, las buenas prácticas son de separar el código en diferentes paquetes y ficheros. Hay muchos patrones diferentes que se pueden seguir para esta estructura. Por el momento, aquí tienes tu primer código completo de Go.
+
+
 ## Buenas prácticas
 
 Las "buenas prácticas" en el mundo de la programación se refieren a enfoques, técnicas, y pautas recomendadas que los desarrolladores adoptan para escribir código de alta calidad, mantenible y eficiente. Estas prácticas han surgido a lo largo del tiempo como respuestas a desafíos comunes en el desarrollo de software y buscan mejorar la legibilidad, la escalabilidad y la robustez de los programas.
@@ -1407,6 +1624,25 @@ Las "buenas prácticas" en el mundo de la programación se refieren a enfoques, 
 
 - **Nombres de Funciones de Pruebas:**
   - Nombra las funciones de prueba con el prefijo `Test`, seguido por el nombre de la función que estás probando.
+
+## Conclusión
+
+¡Felicidades, has completado tu guía de introducción a Go! Has adquirido los fundamentos esenciales de este poderoso lenguaje de programación y estás listo para comenzar tu viaje en el desarrollo de software.
+
+#### Siguientes Pasos:
+
+1. **Practica, Practica, Practica:** La práctica es clave para consolidar tus conocimientos. Crea pequeños proyectos, resuelve desafíos y participa en comunidades en línea.
+
+2. **Explora Proyectos de Código Abierto:** Examina proyectos de código abierto escritos en Go. Esto te brindará una visión valiosa sobre las mejores prácticas y la estructura de proyectos más grandes.
+3. **Colabora y Aprende de Otros:** Únete a la comunidad Go. Participa en foros, grupos de discusión y eventos locales. La colaboración y el intercambio de conocimientos te harán crecer como desarrollador.
+
+4. **Amplía tus Conocimientos:** Investiga más sobre temas avanzados como concurrencia, testing, y desarrollo web en Go. La documentación oficial y otros recursos en línea son excelentes fuentes para continuar aprendiendo.
+
+5. **Desarrolla tus Proyectos Personales:** ¡Sé creativo! Construye aplicaciones que te interesen y que resuelvan problemas reales. La mejor manera de aprender es aplicar tus conocimientos en proyectos prácticos.
+
+El aprendizaje continuo es la clave para destacar en el desarrollo de software. Go es un lenguaje versátil y eficiente que te permitirá abordar una variedad de desafíos. A medida que avanzas, no tengas miedo de enfrentarte a nuevos conceptos y experimentar. La experiencia práctica te convertirá en un desarrollador más sólido.
+
+Recuerda, el camino para convertirte en un maestro de Go comienza con el primer paso. Disfruta del viaje, mantente curioso y sigue construyendo cosas asombrosas con Go. Buena suerte en tu emocionante travesía de programación.
 
 ## Recursos
 
