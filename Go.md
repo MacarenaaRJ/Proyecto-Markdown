@@ -188,8 +188,6 @@ func main() {
 
 Los diferentes tipos de enteros están ahí para darte flexibilidad en cuanto al rango de valores que puedes representar. En situaciones cotidianas, generalmente usarás simplemente `int` para números enteros regulares. Solo si necesitas un control más preciso sobre el tamaño o la eficiencia de almacenamiento, podrías explorar otros tipos de enteros.
 
-Recuerda, la programación se trata de solucionar problemas y crear cosas increíbles. No te sientas presionado por recordar todos los detalles al principio. Con el tiempo y la práctica, te sentirás más cómodo con estos conceptos. ¡Ánimo y a seguir aprendiendo!
-
 ### Declaración de variables
 
 En Go, cuando escribes un programa, necesitas decirle al lenguaje qué tipo de información almacenará cada "caja" de datos llamada variable. Esto se llama declarar una variable explícitamente. La ventaja es que el programa puede atrapar errores antes de ejecutarse, como si estuvieras usando un corrector ortográfico para asegurarte de que las palabras estén escritas correctamente.
