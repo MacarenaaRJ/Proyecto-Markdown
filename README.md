@@ -2,8 +2,8 @@
 
 Escrito por Macarena Ramos Jiménez
 
-email: macarenarj96@gmail.com
-Linkedin: www.linkedin.com/in/macarenarj
+- email: macarenarj96@gmail.com
+- Linkedin: www.linkedin.com/in/macarenarj
 
 # Proyecto Go y React
 
