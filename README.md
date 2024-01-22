@@ -10,17 +10,17 @@ Linkedin: www.linkedin.com/in/macarenarj
 Manuales de iniciación de Go en el backend y React en el frontend.
 
 ## Tabla de contenidos
-[[#Instalación: Linux|Instalación: Linux]]
-[[#Sintaxis básica|Sintaxis básica]]
-[[#Estructuras de control|Estructuras de control]]
-[[#Bucles|Bucles]]
-[[#Array (estructuras de datos)|Array (estructuras de datos)]]
-[[#Funciones (modularidad)|Funciones (modularidad)]]
-[[#POO|POO]]
-[[#Creación de la BBDD|Creación de la BBDD]]
-[[#CRUD con MYSQL|CRUD con MYSQL]]
-[[#Pruebas|Pruebas]]
-[[#Recursos|Recursos]]
+- [[#Instalación: Linux|Instalación: Linux]]
+- [[#Sintaxis básica|Sintaxis básica]]
+- [[#Estructuras de control|Estructuras de control]]
+- [[#Bucles|Bucles]]
+- [[#Array (estructuras de datos)|Array (estructuras de datos)]]
+- [[#Funciones (modularidad)|Funciones (modularidad)]]
+- [[#POO|POO]]
+- [[#Creación de la BBDD|Creación de la BBDD]]
+- [[#CRUD con MYSQL|CRUD con MYSQL]]
+- [[#Pruebas|Pruebas]]
+- [[#Recursos|Recursos]]
 
 ### Go
 
