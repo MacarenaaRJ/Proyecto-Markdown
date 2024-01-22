@@ -19,7 +19,6 @@ Escrito por **Macarena Ramos Jiménez**
 - [[#Creación de la BBDD|Creación de la BBDD]]
 - [[#CRUD con MYSQL|CRUD con MYSQL]]
 - [[#Pruebas|Pruebas]]
-- [[#Buenas prácticas|Buenas prácticas]]
 - [[#Recursos|Recursos]]
 
 # Go
