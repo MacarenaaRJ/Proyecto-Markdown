@@ -1336,28 +1336,6 @@ export default App;
 
 Ahora tendrás una aplicación CRUD básica con React y MySQL. Ten en cuenta que este ejemplo es bastante simplificado y en un entorno de producción, deberías implementar medidas de seguridad adicionales y gestionar los errores de manera más robusta. Además que desde la documentación oficial de React se recomienda el uso de un framework como mecionamos al principio del manual.
 
-## Conclusión
-
-Es un logro significativo llegar hasta el final de esta guía, así que felicidades.
-
-Has dedicado tiempo, esfuerzo y energía a explorar el vasto universo de JavaScript y React. Ahora, mientras nos despedimos, quiero profundizar en la importancia de lo que has logrado y proporcionarte más orientación para tu continuo viaje de aprendizaje.
-
-#### Siguientes Pasos:
-
-1. **Practica, Practica, Practica:** La práctica es clave para consolidar tus conocimientos. Crea pequeños proyectos, resuelve desafíos y participa en comunidades en línea.
-
-2. **Explora Proyectos de Código Abierto:** Examina proyectos de código abierto escritos en React. Esto te brindará una visión valiosa sobre las mejores prácticas y la estructura de proyectos más grandes.
-3. **Colabora y Aprende de Otros:** Únete a la comunidad React. Participa en foros, grupos de discusión y eventos locales. La colaboración y el intercambio de conocimientos te harán crecer como desarrollador.
-
-4. **Amplía tus Conocimientos:** Investiga más sobre temas avanzados. La documentación oficial y otros recursos en línea son excelentes fuentes para continuar aprendiendo.
-
-5. **Desarrolla tus Proyectos Personales:** ¡Sé creativo! Construye aplicaciones que te interesen y que resuelvan problemas reales. La mejor manera de aprender es aplicar tus conocimientos en proyectos prácticos.
-
-El aprendizaje continuo es la clave para destacar en el desarrollo de software. Javascript es un lenguaje versátil que te permitirá abordar una variedad de desafíos. A medida que avanzas, no tengas miedo de enfrentarte a nuevos conceptos y experimentar. La experiencia práctica te convertirá en un desarrollador más sólido.
-
-Recuerda, el camino para convertirte en un maestro de React comienza con el primer paso. Disfruta del viaje, mantente curioso y sigue construyendo cosas asombrosas con React. Buena suerte en tu emocionante travesía de programación.
-
-
 ## Caso práctico
 Vamos a crear un caso práctico simple de una aplicación React para un manual de principiantes. En este ejemplo, construiremos una aplicación de gestión de tareas con las secciones mencionadas en el manual. A medida que avanzamos en el caso práctico, cubriremos la instalación, la sintaxis básica, estructuras de control, bucles, arrays, funciones, programación orientada a objetos (POO), y la conexión a una base de datos MySQL para realizar operaciones CRUD.
 
@@ -1643,7 +1621,7 @@ function Home() {
     updatedTasks.splice(index, 1);
 ```
 
-Este caso práctico proporciona una introducción práctica y paso a paso para construir una aplicación React desde cero, cubriendo varios aspectos fundamentales. A partir de aquí, puedes continuar explorando React y sus numerosas características para construir aplicaciones web más complejas y dinámicas.
+Este caso práctico proporciona una introducción práctica y paso a paso para construir una aplicación React desde cero, cubriendo varios aspectos fundamentales.
 
 ## Recursos
 
