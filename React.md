@@ -20,7 +20,6 @@ Escrito por **Macarena Ramos Jiménez**
 - [[#Sintaxis básica de React|Sintaxis básica de React]]
 - [[#El uso de los Hooks|El uso de los Hooks]]
 - [[#CRUD con MYSQL|CRUD con MYSQL]]
-- [[#Conclusión|Conclusión]]
 - [[#Recursos|Recursos]]
 
 # React
