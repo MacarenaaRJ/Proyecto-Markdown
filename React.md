@@ -21,7 +21,6 @@ Escrito por **Macarena Ramos Jiménez**
 - [[#El uso de los Hooks|El uso de los Hooks]]
 - [[#CRUD con MYSQL|CRUD con MYSQL]]
 - [[#Caso práctico|Caso práctico]]
-- [[#Conclusión|Conclusión]]
 - [[#Recursos|Recursos]]
 
 # React
