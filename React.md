@@ -20,6 +20,8 @@ Escrito por **Macarena Ramos Jiménez**
 - [[#Sintaxis básica de React|Sintaxis básica de React]]
 - [[#El uso de los Hooks|El uso de los Hooks]]
 - [[#CRUD con MYSQL|CRUD con MYSQL]]
+- [[#Caso práctico|Caso práctico]]
+- [[#Conclusión|Conclusión]]
 - [[#Recursos|Recursos]]
 
 # React
@@ -1334,6 +1336,315 @@ export default App;
 - Inicia tu aplicación React ejecutando `npm start` en otra terminal.
 
 Ahora tendrás una aplicación CRUD básica con React y MySQL. Ten en cuenta que este ejemplo es bastante simplificado y en un entorno de producción, deberías implementar medidas de seguridad adicionales y gestionar los errores de manera más robusta. Además que desde la documentación oficial de React se recomienda el uso de un framework como mecionamos al principio del manual.
+
+## Conclusión
+
+Es un logro significativo llegar hasta el final de esta guía, así que felicidades.
+
+Has dedicado tiempo, esfuerzo y energía a explorar el vasto universo de JavaScript y React. Ahora, mientras nos despedimos, quiero profundizar en la importancia de lo que has logrado y proporcionarte más orientación para tu continuo viaje de aprendizaje.
+
+#### Siguientes Pasos:
+
+1. **Practica, Practica, Practica:** La práctica es clave para consolidar tus conocimientos. Crea pequeños proyectos, resuelve desafíos y participa en comunidades en línea.
+
+2. **Explora Proyectos de Código Abierto:** Examina proyectos de código abierto escritos en React. Esto te brindará una visión valiosa sobre las mejores prácticas y la estructura de proyectos más grandes.
+3. **Colabora y Aprende de Otros:** Únete a la comunidad React. Participa en foros, grupos de discusión y eventos locales. La colaboración y el intercambio de conocimientos te harán crecer como desarrollador.
+
+4. **Amplía tus Conocimientos:** Investiga más sobre temas avanzados. La documentación oficial y otros recursos en línea son excelentes fuentes para continuar aprendiendo.
+
+5. **Desarrolla tus Proyectos Personales:** ¡Sé creativo! Construye aplicaciones que te interesen y que resuelvan problemas reales. La mejor manera de aprender es aplicar tus conocimientos en proyectos prácticos.
+
+El aprendizaje continuo es la clave para destacar en el desarrollo de software. Javascript es un lenguaje versátil que te permitirá abordar una variedad de desafíos. A medida que avanzas, no tengas miedo de enfrentarte a nuevos conceptos y experimentar. La experiencia práctica te convertirá en un desarrollador más sólido.
+
+Recuerda, el camino para convertirte en un maestro de React comienza con el primer paso. Disfruta del viaje, mantente curioso y sigue construyendo cosas asombrosas con React. Buena suerte en tu emocionante travesía de programación.
+
+
+## Caso práctico
+Vamos a crear un caso práctico simple de una aplicación React para un manual de principiantes. En este ejemplo, construiremos una aplicación de gestión de tareas con las secciones mencionadas en el manual. A medida que avanzamos en el caso práctico, cubriremos la instalación, la sintaxis básica, estructuras de control, bucles, arrays, funciones, programación orientada a objetos (POO), y la conexión a una base de datos MySQL para realizar operaciones CRUD.
+
+### Instalación: Linux
+
+#### 1. Instalación de Node.js y npm
+
+Asegúrate de tener Node.js y npm instalados en tu sistema. Puedes instalarlos ejecutando los siguientes comandos en tu terminal:
+
+```bash
+sudo apt update
+sudo apt install nodejs
+sudo apt install npm
+```
+
+Utilizaremos el framework Next.js ya que en la documentación oficial de React recomiendan usar unos de los frameworks propuestos.
+
+#### 2. Crear una aplicación Next.js
+
+Luego, crea una nueva aplicación Next.js utilizando el siguiente comando:
+
+```bash
+npx create-next-app gestion-tareas-nextjs
+cd gestion-tareas-nextjs
+```
+
+### Sintaxis básica
+
+Abre el archivo `pages/index.js` y reemplaza su contenido con el siguiente código:
+
+```js
+// pages/index.js
+import React from 'react';
+
+function Home() {
+  return (
+    <div>
+      <h1>Gestión de Tareas</h1>
+      <p>Bienvenido a la aplicación de gestión de tareas.</p>
+    </div>
+  );
+}
+
+export default Home;
+```
+
+### Estructuras de control
+
+Agrega una estructura de control simple al archivo `pages/index.js` para mostrar un mensaje condicional basado en una variable:
+
+```js
+// pages/index.js
+import React from 'react';
+
+function Home() {
+  const isLoggedIn = true;
+
+  return (
+    <div>
+      <h1>Gestión de Tareas</h1>
+      <p>Bienvenido a la aplicación de gestión de tareas.</p>
+      {isLoggedIn ? <p>Usuario autenticado</p> : <p>Iniciar sesión</p>}
+    </div>
+  );
+}
+
+export default Home;
+```
+
+Esto mostrará el texto según el usuario esté autenticado o no. Ahora mismo, siempre estará autenticado ya que definimos la variable como verdadera al iniciarla y no la cambiamos.
+
+### Bucles
+
+Agrega un bucle que muestra una lista de tareas al archivo `pages/index.js`:
+
+```js
+// pages/index.js
+import React from 'react';
+
+function Home() {
+// Resto del código
+  const tareas = ['Imprimir', 'Cortar', 'Pegar'];
+
+  return (
+    <div>
+      <h1>Gestión de Tareas</h1>
+      // Resto del código
+      <ul>
+        {tareas.map((tarea, index) => (
+          <li key={index}>{tarea}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default Home;
+```
+
+Este código mostrará la lista de tareas en el arreglo tareas. Ul viene de "unordered list" en inglés o lista no ordenada.
+
+### Array (estructuras de datos)
+Supongamos que tienes un array de objetos, cada uno representando un producto con un nombre y un precio. Queremos mostrar estos productos en una lista en un componente React.
+```js
+import React from 'react';
+
+// Array de productos
+const productos = [
+  { id: 1, nombre: 'Camiseta', precio: 20 },
+  { id: 2, nombre: 'Pantalón', precio: 30 },
+  { id: 3, nombre: 'Zapatos', precio: 50 },
+  { id: 4, nombre: 'Sombrero', precio: 15 },
+];
+
+// Componente que muestra la lista de productos
+const ListaProductos = () => {
+  return (
+    <div>
+      <h1>Lista de Productos</h1>
+      <ul>
+        {productos.map((producto) => (
+          // La propiedad "key" es importante para React y ayuda a identificar de manera única cada elemento en la lista
+          <li key={producto.id}>
+            <strong>{producto.nombre}</strong> - ${producto.precio}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+// Componente principal que utiliza ListaProductos
+const App = () => {
+  return (
+    <div>
+      <ListaProductos />
+    </div>
+  );
+};
+
+export default App;
+
+```
+
+En este ejemplo:
+
+1. Definimos un array llamado `productos` que contiene objetos con información sobre productos.
+2. Creamos un componente llamado `ListaProductos` que utiliza el método `map` para recorrer el array de productos y renderizar cada elemento como un elemento de lista (`<li>`).
+3. El componente principal `App` simplemente incluye el componente `ListaProductos`.
+
+### Funciones (modularidad)
+Refactoriza el código para mover la lógica de agregar tareas a una función separada en el archivo `pages/index.js`:
+
+```js
+// pages/index.js
+import React, { useState } from 'react';
+
+function Home() {
+  // Estado para la nueva tarea y lista de tareas existentes
+  const [newTask, setNewTask] = useState('');
+  const [tasks, setTasks] = useState(['Tarea 1', 'Tarea 2', 'Tarea 3']);
+
+  // Función para agregar una nueva tarea
+  const addTask = () => {
+    // Utilizamos el spread operator (...) para crear un nuevo array con todas las tareas existentes y la nueva tarea
+    setTasks([...tasks, newTask]);
+    // Limpiamos el campo de la nueva tarea después de agregarla
+    setNewTask('');
+  };
+
+  return (
+    <div>
+      <h1>Gestión de Tareas</h1>
+      {/* Mostramos la lista de tareas como elementos de una lista no ordenada */}
+      <ul>
+        {/* Utilizamos el método map para iterar sobre cada tarea y mostrarla como un elemento de lista */}
+        {tasks.map((task, index) => (
+          // La propiedad key es importante para React y ayuda a identificar de manera única cada elemento en la lista
+          <li key={index}>{task}</li>
+        ))}
+      </ul>
+      {/* Formulario para agregar una nueva tarea */}
+      <input type="text" value={newTask} onChange={(e) => setNewTask(e.target.value)} />
+      <button onClick={addTask}>Agregar Tarea</button>
+    </div>
+  );
+}
+
+export default Home;
+
+```
+
+Ahora, desglosemos el código:
+
+1. **useState:** Se utiliza el hook `useState` para gestionar el estado de dos variables: `newTask` (que almacena la descripción de la nueva tarea) y `tasks` (que almacena la lista de tareas existentes).
+
+2. **addTask:** Esta es una función que se llama cuando el botón "Agregar Tarea" se hace clic. Agrega la nueva tarea al array de tareas utilizando el spread operator (`[...tasks, newTask]`), creando así un nuevo array que incluye todas las tareas existentes más la nueva tarea. Después de agregar la tarea, limpia el campo `newTask` para prepararse para la próxima entrada.
+
+3. **Renderizado de Tareas:** Utilizamos el método `map` para iterar sobre el array de tareas y renderizar cada tarea como un elemento de la lista (`<li>`).
+
+4. **Formulario:** Se incluye un formulario simple con un campo de entrada de texto (`<input>`) para la nueva tarea y un botón para agregar la tarea.
+
+
+
+### POO
+
+Implementa una clase `Tarea` en un archivo separado `src/Task.js`:
+```js
+// src/Task.js
+class Task {
+  constructor(description) {
+    this.description = description;
+  }
+}
+
+export default Task;
+```
+
+En `pages/index.js`, utiliza la clase `Task` para representar las tareas:
+```js
+// pages/index.js
+import React, { useState } from 'react';
+import Task from '../src/Task';
+
+function Home() {
+  const [newTask, setNewTask] = useState('');
+  const [tasks, setTasks] = useState([new Task('Tarea 1'), new Task('Tarea 2'), new Task('Tarea 3')]);
+
+  const addTask = () => {
+    setTasks([...tasks, new Task(newTask)]);
+    setNewTask('');
+  };
+
+  return (
+    <div>
+      <h1>Gestión de Tareas</h1>
+      <ul>
+        {tasks.map((task, index) => (
+          <li key={index}>{task.description}</li>
+        ))}
+      </ul>
+      <input type="text" value={newTask} onChange={(e) => setNewTask(e.target.value)} />
+      <button onClick={addTask}>Agregar Tarea</button>
+    </div>
+  );
+}
+
+export default Home;
+
+```
+
+### CRUD con MySQL
+Implementaremos funciones CRUD básicas en `pages/index.js` para simular operaciones con MySQL:
+
+```js
+// pages/index.js
+import React, { useState, useEffect } from 'react';
+import Task from '../src/Task';
+
+function Home() {
+  const [newTask, setNewTask] = useState('');
+  const [tasks, setTasks] = useState([]);
+
+  // Simulación de operaciones CRUD con MySQL
+  useEffect(() => {
+    fetchTasks();
+  }, []);
+
+  const fetchTasks = () => {
+    // Simulamos la obtención de tareas desde MySQL
+    setTasks([new Task('Tarea 1'), new Task('Tarea 2'), new Task('Tarea 3')]);
+  };
+
+  const addTask = () => {
+    // Simulamos la inserción de tarea en MySQL
+    setTasks([...tasks, new Task(newTask)]);
+    setNewTask('');
+  };
+
+  const deleteTask = (index) => {
+    // Simulamos la eliminación de tarea en MySQL
+    const updatedTasks = [...tasks];
+    updatedTasks.splice(index, 1);
+```
+
+Este caso práctico proporciona una introducción práctica y paso a paso para construir una aplicación React desde cero, cubriendo varios aspectos fundamentales. A partir de aquí, puedes continuar explorando React y sus numerosas características para construir aplicaciones web más complejas y dinámicas.
 
 ## Recursos
 
