@@ -10,11 +10,11 @@ Escrito por **Macarena Ramos Jiménez**
 ## React
 
 - [[#Instalación: Linux|Instalación: Linux]]
-- [[#Sintaxis básica de Javascript|Sintaxis básica de Javascript]]
-- [[#Estructuras de Control en Javascript|Estructuras de Control en Javascript]]
-- [[#Bucles en Javascript|Bucles en Javascript]]
-- [[#Array (Estructuras de Datos) en Javascript|Array (Estructuras de Datos) en Javascript]]
-- [[#POO (Programación Orientada a Objetos) en Javascript|POO (Programación Orientada a Objetos) en Javascript]]
+- [[#Sintaxis básica de JavaScript|Sintaxis básica de JavaScript]]
+- [[#Estructuras de Control en JavaScript|Estructuras de Control en JavaScript]]
+- [[#Bucles en JavaScript|Bucles en JavaScript]]
+- [[#Array (Estructuras de Datos) en JavaScript|Array (Estructuras de Datos) en JavaScript]]
+- [[#POO (Programación Orientada a Objetos) en JavaScript|POO (Programación Orientada a Objetos) en JavaScript]]
 - [[#Funciones (Modularidad) en JavaScript|Funciones (Modularidad) en JavaScript]]
 - [[#Funciones de flecha (Arrow Functions)|Funciones de flecha (Arrow Functions)]]
 - [[#Sintaxis básica de React|Sintaxis básica de React]]
@@ -31,13 +31,13 @@ React es una herramienta que nos ayuda a construir cosas geniales en internet. I
 
 En React, todo es como un conjunto de bloques LEGO llamados "componentes". Cada componente es como una pieza individual de tu página web. Puedes tener un componente para el encabezado, otro para el botón, y así sucesivamente.
 
-### Javascript
+### JavaScript
 
 JavaScript es un lenguaje de programación que se puede utilizar para hacer que las páginas web sean interactivas.
 
 Imagina que tu aplicación web es una orquesta, y JavaScript es el director que coordina a todos los músicos (o componentes) para tocar la sinfonía perfecta. React, por otro lado, sería uno de esos músicos talentosos.
 
-### Javascript, HTML, CSS y React
+### JavaScript, HTML, CSS y React
 
 HTML (Lenguaje de Marcado de Hipertexto) es el lenguaje utilizado para estructurar y organizar el contenido de una página web. Piensa en HTML como el esqueleto o la estructura de una página.
 
